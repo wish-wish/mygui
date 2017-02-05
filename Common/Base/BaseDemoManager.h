@@ -40,7 +40,7 @@ namespace base
 
 		virtual void injectKeyPress(MyGUI::KeyCode _key, MyGUI::Char _text)
 		{
-			BaseDemoManager::injectKeyPress(_key, _text);
+			BaseManager::injectKeyPress(_key, _text);
 
 			if (MyGUI::Gui::getInstancePtr() == nullptr)
 				return;
