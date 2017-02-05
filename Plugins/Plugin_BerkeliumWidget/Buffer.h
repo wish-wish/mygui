@@ -6,6 +6,8 @@
 #ifndef BUFFER_H_
 #define BUFFER_H_
 
+#include <algorithm>
+
 namespace helpers
 {
 	class Buffer

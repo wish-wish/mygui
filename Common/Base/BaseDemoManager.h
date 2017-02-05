@@ -40,7 +40,7 @@ namespace base
 
 		virtual void injectKeyPress(MyGUI::KeyCode _key, MyGUI::Char _text)
 		{
-			BaseManager::injectKeyPress(_key, _text);
+			BaseDemoManager::injectKeyPress(_key, _text);
 
 			if (MyGUI::Gui::getInstancePtr() == nullptr)
 				return;
@@ -59,13 +59,13 @@ namespace base
 
 		virtual void createScene()
 		{
-			loadPointerResources();
+			MyGUI::ResourceManager::getInstance().load("PointersW32.xml");
 		}
 
 	protected:
 		virtual void createGui()
 		{
-			BaseManager::createGui();
+			BaseDemoManager::createGui();
 
 			mInfo = new diagnostic::StatisticInfo();
 			mFocusInfo = new diagnostic::InputFocusInfo();

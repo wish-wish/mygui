@@ -164,7 +164,7 @@ namespace MyGUI
 	void BerkeliumWidget::onMouseButtonPressed(int _left, int _top, MouseButton _id)
 	{
 		if (mWindow != nullptr)
-			mWindow->mouseButton(_id.toValue(), true);
+			mWindow->mouseButton(_id.getValue(), true);
 
 		Base::onMouseButtonPressed(_left, _top, _id);
 	}
@@ -172,7 +172,7 @@ namespace MyGUI
 	void BerkeliumWidget::onMouseButtonReleased(int _left, int _top, MouseButton _id)
 	{
 		if (mWindow != nullptr)
-			mWindow->mouseButton(_id.toValue(), false);
+			mWindow->mouseButton(_id.getValue(), false);
 
 		Base::onMouseButtonReleased(_left, _top, _id);
 	}
@@ -204,7 +204,7 @@ namespace MyGUI
 			if (manager.isShiftPressed())
 				mod |= Berkelium::SHIFT_MOD;
 
-			mWindow->keyEvent(true, mod, input::ScanCodeToVirtualKey(_key.toValue()), 0);
+			mWindow->keyEvent(true, mod, input::ScanCodeToVirtualKey(_key.getValue()), 0);
 
 			if (_char != 0)
 			{
@@ -227,7 +227,7 @@ namespace MyGUI
 			if (manager.isShiftPressed())
 				mod |= Berkelium::SHIFT_MOD;
 
-			mWindow->keyEvent(false, mod, input::ScanCodeToVirtualKey(_key.toValue()), 0);
+			mWindow->keyEvent(false, mod, input::ScanCodeToVirtualKey(_key.getValue()), 0);
 		}
 
 		Base::onKeyButtonReleased(_key);

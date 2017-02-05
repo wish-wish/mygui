@@ -14,7 +14,7 @@ namespace demo
 	class BerkeliumBrowser;
 
 	class DemoKeeper :
-		public base::BaseManager
+		public base::BaseDemoManager
 	{
 	public:
 		DemoKeeper();
