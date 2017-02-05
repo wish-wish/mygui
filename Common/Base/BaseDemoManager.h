@@ -65,7 +65,7 @@ namespace base
 	protected:
 		virtual void createGui()
 		{
-			BaseDemoManager::createGui();
+			BaseManager::createGui();
 
 			mInfo = new diagnostic::StatisticInfo();
 			mFocusInfo = new diagnostic::InputFocusInfo();
