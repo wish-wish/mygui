@@ -1,8 +1,9 @@
 mygui_tool(LayoutEditor)
-
+if (NOT MYGUI_BUILD_PLUGINS)
+    add_definitions(-DNOT_PLUGINS)
+endif()
 if (MYGUI_BUILD_PLUGINS)
 	add_dependencies(LayoutEditor Plugin_StrangeButton)
-
 	if (MYGUI_BUILD_HIKARI_PLUGIN)
 		if(WIN32)
 			add_dependencies(LayoutEditor Plugin_HikariWidget)

@@ -126,8 +126,10 @@ namespace MyGUI
 						source = source_node->getContent();
 #endif
 				}
+#ifdef NOT_PLUGINS
 				if (!source.empty())
 					loadPlugin(source);
+#endif
 			}
 		}
 	}

@@ -445,8 +445,9 @@ function(mygui_plugin PROJECTNAME)
 
 	# define the sources
 	include(${PROJECTNAME}.list)
-
+if(NOT MYGUI_STATIC)
 	add_definitions("-D_USRDLL -DMYGUI_BUILD_DLL")
+endif()
 	add_library(${PROJECTNAME} ${MYGUI_LIB_TYPE} ${HEADER_FILES} ${SOURCE_FILES})
 	set_target_properties(${PROJECTNAME} PROPERTIES FOLDER "Plugins")
 	add_dependencies(${PROJECTNAME} MyGUIEngine)
